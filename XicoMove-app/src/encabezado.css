@@ -1,0 +1,50 @@
+body {
+    background-color: #052937;
+    margin: 0;
+    flex-direction: column;
+    font-family: 'hammersmith one', sans-serif;
+
+}
+
+.Encabezado {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #74A147;
+
+}
+
+.Logo {
+    display: flex;
+    align-items: center;
+}
+
+.Logo img {
+    height: 80px;
+    width: auto;
+}
+
+.Menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 35px;
+}
+
+.Menu li {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out, transform 0.2s ease;
+}
+
+.Menu li:hover {
+    color: black;
+    transform: translateY(-2px);
+}
