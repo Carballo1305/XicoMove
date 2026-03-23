@@ -1,50 +1,56 @@
-body {
-    background-color: #052937;
-    margin: 0;
-    flex-direction: column;
-    font-family: 'hammersmith one', sans-serif;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-}
+    body,
+    html {
+        width: 100%;
+        overflow-x: hidden;
+    }
 
-.Encabezado {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    background-color: #74A147;
+    #header {
+        width: 100%;
+        height: auto;
+    }
 
-}
+    .Encabezado {
+        background-color: #89b044;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        width: 100vw;
+        left: 0;
+    }
 
-.Logo {
-    display: flex;
-    align-items: center;
-}
+    .Logo img {
+        height: 60px;
+        width: auto;
+    }
 
-.Logo img {
-    height: 80px;
-    width: auto;
-}
+    .Menu ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        margin: 0;
+        padding: 0;
+    }
 
-.Menu ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 35px;
-}
+    .Menu li {
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-family: 'Segoe UI', sans-serif;
+        transition: color 0.3s ease;
+    }
 
-.Menu li {
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: color 0.2s ease-in-out, transform 0.2s ease;
-}
-
-.Menu li:hover {
-    color: black;
-    transform: translateY(-2px);
-}
+    .Menu li:hover {
+        color: #0c2c36;
+    }

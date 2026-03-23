@@ -1,0 +1,84 @@
+/* Centra la card en la pantalla */
+.contenedor-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Ajusta según el espacio que quieras dejar abajo del header */
+    padding: 20px;
+}
+
+/* La tarjeta que envuelve el formulario */
+.card-contacto {
+    background-color: #1a2a2d; /* Gris muy oscuro azulado */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.card-contacto h2 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estructura del formulario */
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilo de los campos de texto */
+.input-field {
+    background-color: #0d1b1e;
+    border: 1px solid #3d4a4d;
+    border-radius: 8px;
+    padding: 12px 15px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-field::placeholder {
+    color: #6a7a7d;
+}
+
+/* Efecto al hacer clic en un campo */
+.input-field:focus {
+    outline: none;
+    border-color: #89b044; /* El verde de tu logo */
+    box-shadow: 0 0 8px rgba(137, 176, 68, 0.3);
+}
+
+/* Tamaño fijo para el área de mensaje */
+.mensaje {
+    height: 120px;
+    resize: none; /* Evita que el usuario deforme la card */
+}
+
+/* Botón estilizado con el verde Xicotrail */
+.btn-enviar {
+    background-color: #89b044;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: #76993a; /* Un verde un poco más oscuro al pasar el mouse */
+    transform: translateY(-2px);
+}
+
+.btn-enviar:active {
+    transform: translateY(0);
+}

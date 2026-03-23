@@ -1,38 +1,31 @@
-/* contenedor que agrupa las tarjetas */
 .cards-rutas {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Rejilla automática */
+    gap: 25px;
+    padding: 20px 0;
+  
 }
 
-/* Estilo principal de la tarjeta */
 .ruta-card {
-  width: 350px;
-  background-color: #0c2c36;
-  border: 3px solid #7ca14e; 
-  border-radius: 16px;       
-  padding: 12px;             
-  display: flex;
-  flex-direction: column;
-  gap: 12px;                 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-  font-family: 'Segoe UI', sans-serif;
-  transition: transform 0.2s ease;
-  cursor: pointer;
+    width: auto; 
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Para que todas midan lo mismo */
+    box-shadow: 0 4px 10px rgba(97, 97, 97, 0.3);
+    border: #7ca14e solid 2px; /* Borde verde */
+    border-radius: 10%;
+    padding: 15px;
 }
-
 .ruta-card:hover {
   transform: translateY(-4px); 
+   transition: .5s ;
 }
 h2 {
   text-align: center;
   color: #ffffff; 
   font-size: 28px;
   margin-bottom: 20px;
+ 
 }
 
 /* si usas varias imágenes dentro de una tarjeta */

@@ -1,0 +1,82 @@
+/* Contenedor principal adaptado a la paleta de XicoMove */
+.container-centro-tabacal {
+    /* Usamos el color oscuro del footer para hacer contraste con el fondo de la app */
+    background-color: #081d24; 
+    padding: 30px;
+    border-radius: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    color: white;
+    /* Un borde superior sutil con el verde limón del proyecto */
+    border-top: 4px solid #74A147;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-centro-tabacal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+.centro-tabacal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Para que sea responsivo en celulares */
+}
+
+.info-centro-tabacal {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-centro-tabacal h1 {
+    font-size: 2.5rem;
+    color: #74A147; /* Título en color acento verde */
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid rgba(137, 176, 68, 0.3);
+    padding-bottom: 10px;
+}
+
+.info-centro-tabacal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-centro-tabacal li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05); /* Efecto tarjeta de cristal suave */
+    padding: 15px 20px;
+    border-radius: 10px;
+    border-left: 4px solid #89b044;
+    transition: background-color 0.2s ease;
+}
+
+.info-centro-tabacal li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mapa-centro-tabacal {
+    flex: 1.5;
+    min-width: 300px;
+    width: 100%;
+    height: 450px; 
+    border-radius: 20px;
+    overflow: hidden;
+    /* Sombra interna para darle profundidad al mapa */
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.5), 0 5px 15px rgba(0,0,0,0.4);
+    border: 2px solid rgba(137, 176, 68, 0.2);
+}
+
