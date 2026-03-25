@@ -1,0 +1,60 @@
+/* Contenedor principal de la pantalla*/
+.contenedor-operadores {
+    padding: 20px;
+    max-width: 1000px; 
+    margin: 0 auto; 
+}
+
+/* El H2 con el estilo de tus tarjetas */
+.contenedor-operadores h2 {
+    text-align: center;
+    color: #ffffff; 
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Estilos de la Tabla*/
+.tabla-operadores {
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 0;
+    
+    /* El borde verde y sombra de las tarjetas */
+    border: #7ca14e solid 2px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(97, 97, 97, 0.3);
+    overflow: hidden; 
+}
+
+/* Cabecera de la tabla (Títulos de columnas)*/
+.tabla-operadores thead {
+    background-color: rgba(124, 161, 78, 0.1); 
+}
+
+.tabla-operadores th {
+    font-size: 18px; 
+    font-weight: bold;
+    padding: 18px 15px;
+    text-align: left;
+    border-bottom: 2px solid #7ca14e; 
+}
+
+/* Cuerpo de la tabla (Los datos) */
+.tabla-operadores td {
+    padding: 15px;
+    color: #b0bec5; 
+    font-size: 16px;
+    border-bottom: 1px solid rgba(176, 190, 197, 0.2); 
+}
+
+.tabla-operadores tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-operadores tbody tr {
+    transition: .3s; 
+}
+
+.tabla-operadores tbody tr:hover {
+    background-color: rgba(124, 161, 78, 0.15); 
+}

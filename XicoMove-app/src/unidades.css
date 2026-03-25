@@ -1,0 +1,73 @@
+/* =========================================
+   Contenedor principal de la pantalla
+========================================= */
+.contenedor-unidades {
+    padding: 20px;
+    max-width: 900px; /* Mantiene la tabla con un buen tamaño y no estirada al infinito */
+    margin: 0 auto; /* Centra la tabla en la pantalla */
+}
+
+/* El mismo H2 que usas en tus rutas */
+.contenedor-unidades h2 {
+    text-align: center;
+    color: #ffffff; 
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   Estilos de la Tabla
+========================================= */
+.tabla-unidades {
+    width: 100%;
+    border-collapse: separate; /* Necesario para que el border-radius funcione en tablas */
+    border-spacing: 0;
+    
+    /* Le aplicamos tu mismo borde verde y sombra de las tarjetas */
+    border: #7ca14e solid 2px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(97, 97, 97, 0.3);
+    overflow: hidden; /* Oculta las esquinas de las filas para que no tapen el borde redondeado */
+}
+
+/* =========================================
+   Cabecera de la tabla (Títulos de columnas)
+========================================= */
+.tabla-unidades thead {
+    background-color: rgba(124, 161, 78, 0.1); /* Un fondo verde súper transparente para destacar */
+}
+
+.tabla-unidades th {
+    color: #7ca14e; /* Tu verde para los títulos */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 18px 15px;
+    text-align: left;
+    border-bottom: 2px solid #7ca14e; /* Línea divisoria fuerte */
+}
+
+/* =========================================
+   Cuerpo de la tabla (Los datos)
+========================================= */
+.tabla-unidades td {
+    padding: 15px;
+    color: #b0bec5; /* Tu gris claro para los textos normales */
+    font-size: 16px;
+    border-bottom: 1px solid rgba(176, 190, 197, 0.2); /* Línea gris muy sutil entre filas */
+}
+
+/* Quitar la línea de la última fila para que no choque con el borde de la tabla */
+.tabla-unidades tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* =========================================
+   Efecto Hover (Cuando pasas el mouse)
+========================================= */
+.tabla-unidades tbody tr {
+    transition: .3s; 
+}
+
+.tabla-unidades tbody tr:hover {
+    background-color: rgba(124, 161, 78, 0.15); 
+}

@@ -7,23 +7,32 @@ function Login({ onLogin }) {
     const [error, setError] = useState('');
     const [exito, setExito] = useState('');
 
-    const handleLogin = (e) => {
+const handleLogin = async (e) => {
         e.preventDefault();
-        if (usuario === 'admin' && contraseña === 'admin') {
-            setExito('Login exitoso como Administrador');
-            setError('');
-            setTimeout(() => {
-                if(onLogin) onLogin({ rol: 'admin' });
-            }, 1000); 
-        } else if (usuario === 'usuario' && contraseña === '1234') {
-            setExito('Login exitoso como Usuario');
-            setError('');
-            setTimeout(() => {
-                if(onLogin) onLogin({ rol: 'usuario' });
-            }, 1000); 
-        } else {
-            setError('Usuario o contraseña incorrectos');
-            setExito('');
+        setError('');
+        setExito('');
+
+        try {
+            const respuesta = await fetch('http://localhost:3001/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ usuario, contraseña }) 
+            });
+
+            const data = await respuesta.json();
+            if (respuesta.ok && data.exito) {
+                setExito(data.mensaje);
+                setTimeout(() => {
+                    if(onLogin) onLogin({ rol: data.rol }); 
+                }, 1000); 
+            } else {
+                setError(data.error || 'Error al iniciar sesión');
+            }
+        } catch (err) {
+            console.error(err);
+            setError('Error de conexión con el servidor');
         }
     };
 

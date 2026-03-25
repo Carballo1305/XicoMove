@@ -10,6 +10,8 @@ import Utxj_Tabacal from './recursos-rutas/Utxj-Tabacal';
 import Baritas_Centro from './recursos-rutas/Baritas-Centro';
 import Centro_Utxj from './recursos-rutas/Centro_Utxj';
 import Login from './Login';
+import Unidades from './unidades';
+import Operadores from './operadores';
 
 const PlaceholderVista = ({ titulo }) => (
   <div style={{ color: "white", padding: "50px", textAlign: "center" }}>
@@ -39,8 +41,8 @@ function App() {
         {vista === 'Centro-Utxj' && <Centro_Utxj />}
         
         {/* Vistas de Administrador */}
-        {vista === 'Añadir Unidades' && <PlaceholderVista titulo="Añadir Unidades" />}
-        {vista === 'Añadir Operadores' && <PlaceholderVista titulo="Añadir Operadores" />}
+        {vista === 'Añadir Unidades' && <Unidades/> }
+        {vista === 'Añadir Operadores' && <Operadores/>}
         {vista === 'Historial de Reportes' && <PlaceholderVista titulo="Historial de Reportes de Pánico" />}
 
         <Mapa lat={20.2390} lng={-97.9982} nombre="XicoMove" />
