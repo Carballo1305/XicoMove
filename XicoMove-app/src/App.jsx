@@ -14,6 +14,7 @@ import Registrar from './Registrar';
 import Unidades from './unidades';
 import Operadores from './operadores';
 import Inicio from './Inicio';
+import AcercaDe from './AcercaDe';
 
 const PlaceholderVista = ({ titulo }) => (
   <div style={{ color: "white", padding: "50px", textAlign: "center" }}>
@@ -36,7 +37,7 @@ function App() {
         {vista === 'Registrar' && <Registrar cambiarVista={setVista} onLogin={(user) => { setUsuarioActual(user); setVista('Inicio'); }} />}
         {vista === 'Rutas' && (<Rutas cambiarVista={setVista} />)}
         {vista === 'Contacto' && (<Contacto />)}
-        {vista === 'AcercaDe' && <h1>Acerca de XicoMove</h1>}
+        {vista === 'AcercaDe' && <AcercaDe />}
         {vista === 'Centro-Tabacal' && <Centro_Tabacal />}
         {vista === 'Centro-Morelos' && <Centro_Morelos />}
         {vista === 'UTXJ-Tabacal' && <Utxj_Tabacal />}

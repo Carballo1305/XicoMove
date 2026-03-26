@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { GoogleMap, useJsApiLoader, DirectionsRenderer } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader, DirectionsRenderer, Marker } from '@react-google-maps/api';
 
 const containerStyle = {
     width: '100%',
@@ -45,13 +45,14 @@ function Mapa({ lat = 20.2718, lng = -97.9559, origen = null, destino = null }) 
                 mapContainerStyle={containerStyle}
                 center={center}
                 zoom={15}
-                // Añadimos estilos para que el mapa se vea más limpio
+
                 options={{
-                    disableDefaultUI: true, // Quita los botones de Google
+                    disableDefaultUI: true,
                     zoomControl: true,
                 }}
             >
                 {directions && <DirectionsRenderer directions={directions} />}
+                <Marker position={center} />
             </GoogleMap>
         </div>
     )

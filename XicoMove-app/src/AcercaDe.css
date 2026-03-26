@@ -1,0 +1,173 @@
+/* Estilos para Acerca de XicoMove */
+.Acerca_full {
+  width: 100%;
+}
+
+.Acerca_contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px;
+}
+
+.Acerca_contenido {
+  flex: 1;
+  text-align: left;
+}
+
+.Acerca_contenido h2 {
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.Acerca_contenido p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #b0bec5;
+}
+
+.Acerca_logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Acerca_logo img {
+  max-width: 100%;
+  background-color: #ffffff;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(124, 161, 78, 0.475);
+}
+
+/* Estilos para la sección Nuestra Sede */
+.Nuestra_sede_section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 40px 20px;
+}
+
+.Nuestra_sede_section>h2 {
+  font-size: 32px;
+  color: #7ca14e;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.Sucursal-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.Card-Sucursal {
+  background: linear-gradient(135deg, rgba(124, 161, 78, 0.1) 0%, rgba(124, 161, 78, 0.05) 100%);
+  border: 2px solid #7ca14e;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(124, 161, 78, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.Card-Sucursal:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(124, 161, 78, 0.4);
+  border-color: #9bc76b;
+}
+
+.sede-card-header {
+  background: linear-gradient(135deg, #7ca14e 0%, #6a8a3f 100%);
+  padding: 25px 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.sede-card-header h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.sede-card-body {
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.sede-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sede-info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #b0bec5;
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.sede-info-item .icon {
+  font-size: 20px;
+  color: #7ca14e;
+  min-width: 24px;
+  text-align: center;
+}
+
+.sede-info-item span:last-child {
+  flex: 1;
+}
+
+.sede-mapa {
+  width: 90%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(124, 161, 78, 0.3);
+  background: #0c2c36;
+}
+
+@media (max-width: 768px) {
+  .Acerca_contenedor {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .Acerca_contenido {
+    text-align: center;
+  }
+
+  .Acerca_contenido h2 {
+    font-size: 24px;
+  }
+
+  .Acerca_contenido p {
+    font-size: 14px;
+  }
+
+  .Sucursal-main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .Nuestra_sede_section>h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+  

@@ -189,6 +189,48 @@ app.get("/api/conductores", (req, res) => {
   });
 });
 
+// Guardar nuevo operador
+app.post("/api/operadores", (req, res) => {
+  const { nombre, apellidoP, apellidoM, turno, noPlaca } = req.body;
+
+  if (!nombre || !apellidoP || !apellidoM || !turno || !noPlaca) {
+    return res.status(400).json({ error: "Todos los campos son obligatorios" });
+  }
+
+  const sql = "INSERT INTO conductor (nombre, apellidoP, apellidoM, turno, noPlaca) VALUES (?, ?, ?, ?, ?)";
+  db.query(sql, [nombre, apellidoP, apellidoM, turno, noPlaca], (err, result) => {
+    if (err) {
+      console.error("Error al registrar operador:", err);
+      return res.status(500).json({ error: "Error al registrar el operador" });
+    }
+    res.json({ 
+      exito: true, 
+      mensaje: "Operador registrado exitosamente" 
+    });
+  });
+});
+
+// Guardar nueva unidad
+app.post("/api/unidades", (req, res) => {
+  const { noPlaca, horario, idRuta } = req.body;
+
+  if (!noPlaca || !horario || !idRuta) {
+    return res.status(400).json({ error: "Todos los campos son obligatorios" });
+  }
+
+  const sql = "INSERT INTO unidades (noPlaca, horario, idRuta) VALUES (?, ?, ?)";
+  db.query(sql, [noPlaca, horario, idRuta], (err, result) => {
+    if (err) {
+      console.error("Error al registrar unidad:", err);
+      return res.status(500).json({ error: "Error al registrar la unidad" });
+    }
+    res.json({ 
+      exito: true, 
+      mensaje: "Unidad registrada exitosamente" 
+    });
+  });
+});
+
 const PORT = 3001;
 app.listen(PORT, () => {
   console.log(`Servidor Backend corriendo en http://localhost:${PORT}`);
