@@ -1,15 +1,34 @@
+/* Contenedor principal con layout de dos columnas */
+.contenedor-principal-operadores {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Sección del formulario (izquierda) */
+.seccion-formulario {
+    flex: 0.4;
+    min-width: 350px;
+}
+
+/* Sección de la tabla (derecha) */
+.seccion-tabla {
+    flex: 0.6;
+    min-width: 400px;
+}
+
 /* Contenedor principal de la pantalla*/
 .contenedor-operadores {
-    padding: 20px;
-    max-width: 1000px; 
-    margin: 0 auto; 
+    padding: 0;
 }
 
 /* El H2 con el estilo de tus tarjetas */
 .contenedor-operadores h2 {
     text-align: center;
     color: #ffffff; 
-    font-size: 28px;
+    font-size: 25px;
     margin-bottom: 30px;
 }
 
@@ -57,4 +76,23 @@
 
 .tabla-operadores tbody tr:hover {
     background-color: rgba(124, 161, 78, 0.15); 
+
+}
+.Editar{
+    padding: 8px 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.Borrar{
+    padding: 8px 12px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }

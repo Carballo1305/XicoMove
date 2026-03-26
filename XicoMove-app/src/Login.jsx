@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
 
-function Login({ onLogin }) {
+function Login({ onLogin, cambiarVista }) {
     const [usuario, setUsuario] = useState('');
     const [contraseña, setContraseña] = useState('');
     const [error, setError] = useState('');
@@ -41,10 +41,11 @@ const handleLogin = async (e) => {
         <div className="container-login">
             <div className="login">
                 <div className="info-login">
-                    <h1>Login</h1>
+                    <h1>Iniciar Sesion</h1>
                     <form onSubmit={handleLogin}>
                         <input type="text" placeholder="Usuario" value={usuario} onChange={(e) => setUsuario(e.target.value)} />
                         <input type="password" placeholder="Contraseña" value={contraseña} onChange={(e) => setContraseña(e.target.value)} />
+                        <p>¿No tienes cuenta? <a href="#" onClick={() => cambiarVista('Registrar')}>Regístrate aquí</a></p>
                         <button type="submit">Iniciar Sesión</button>
                     </form>
                     {error && <p className="error-msg">{error}</p>}

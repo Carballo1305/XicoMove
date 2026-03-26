@@ -10,8 +10,10 @@ import Utxj_Tabacal from './recursos-rutas/Utxj-Tabacal';
 import Baritas_Centro from './recursos-rutas/Baritas-Centro';
 import Centro_Utxj from './recursos-rutas/Centro_Utxj';
 import Login from './Login';
+import Registrar from './Registrar';
 import Unidades from './unidades';
 import Operadores from './operadores';
+import Inicio from './Inicio';
 
 const PlaceholderVista = ({ titulo }) => (
   <div style={{ color: "white", padding: "50px", textAlign: "center" }}>
@@ -29,8 +31,9 @@ function App() {
       <Encabezado cambiarVista={setVista} UsuarioActual={UsuarioActual} setUsuarioActual={setUsuarioActual} />
 
       <main className='Contenido'>
-        {vista === 'Inicio' && <h1>Bienvenido a XicoMove</h1>}
-        {vista === 'Login' && <Login onLogin={(user) => { setUsuarioActual(user); setVista('Inicio'); }} />}
+        {vista === 'Inicio' && <Inicio cambiarVista={setVista} />}
+        {vista === 'Login' && <Login cambiarVista={setVista} onLogin={(user) => { setUsuarioActual(user); setVista('Inicio'); }} />}
+        {vista === 'Registrar' && <Registrar cambiarVista={setVista} onLogin={(user) => { setUsuarioActual(user); setVista('Inicio'); }} />}
         {vista === 'Rutas' && (<Rutas cambiarVista={setVista} />)}
         {vista === 'Contacto' && (<Contacto />)}
         {vista === 'AcercaDe' && <h1>Acerca de XicoMove</h1>}
@@ -49,7 +52,32 @@ function App() {
       </main>
 
       <footer className="main-footer">
-        <p>&copy; 2026 Carballo1305. XicoMove.</p>
+        <div className="footer-container">
+          <div className="footer-section">
+            <h4>Acerca de Nosotros</h4>
+            <p>XicoMove es un proyecto dedicado a mejorar la seguridad y movilidad en la región de Xicotepec de Juárez.</p>
+          </div>
+
+          <div className="footer-section">
+            <h4>Nuestros Valores</h4>
+            <ul>
+              <li>Transparencia</li>
+              <li>Innovación</li>
+              <li>Seguridad</li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h4>Contacto</h4>
+            <p> Teléfono: (233) 316-0440</p>
+            <p> Email: xicomove@gmail.com</p>
+            <p> Xicotepec de Juárez, Puebla</p>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>&copy; 2026 XicoMove. Todos los derechos reservados.</p>
+        </div>
       </footer>
     </div>
   );

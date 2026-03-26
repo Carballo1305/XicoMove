@@ -4,11 +4,6 @@
         box-sizing: border-box;
     }
 
-    body,
-    html {
-        width: 100%;
-        overflow-x: hidden;
-    }
 
     #header {
         width: 100%;
@@ -30,7 +25,7 @@
     }
 
     .Logo img {
-        height: 60px;
+        height: 70px;
         width: auto;
     }
 
@@ -40,6 +35,8 @@
         gap: 25px;
         margin: 0;
         padding: 0;
+        justify-content: center;
+        width: 100%;
     }
 
     .Menu li {

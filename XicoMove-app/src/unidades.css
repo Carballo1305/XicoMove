@@ -1,10 +1,29 @@
+/* Contenedor principal con layout de dos columnas */
+.contenedor-principal-unidades {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Sección del formulario (izquierda) */
+.seccion-formulario {
+    flex: 0.4;
+    min-width: 350px;
+}
+
+/* Sección de la tabla (derecha) */
+.seccion-tabla {
+    flex: 0.6;
+    min-width: 400px;
+}
+
 /* =========================================
    Contenedor principal de la pantalla
 ========================================= */
 .contenedor-unidades {
-    padding: 20px;
-    max-width: 900px; /* Mantiene la tabla con un buen tamaño y no estirada al infinito */
-    margin: 0 auto; /* Centra la tabla en la pantalla */
+    padding: 0;
 }
 
 /* El mismo H2 que usas en tus rutas */

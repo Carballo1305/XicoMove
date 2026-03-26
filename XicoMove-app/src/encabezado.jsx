@@ -30,7 +30,7 @@ function Menu({cambiarVista, UsuarioActual, setUsuarioActual}) {
             { id:'Rutas', nombre:'Rutas' },
             { id:'Logout', nombre:'Cerrar Sesión'}
         ];
-    } else if (UsuarioActual?.rol === 'usuario') {
+    } else if (UsuarioActual?.rol === 'cliente') {
         opciones = [
             { id:'Inicio', nombre:'Inicio' },
             { id:'Rutas', nombre:'Rutas'},
@@ -40,7 +40,7 @@ function Menu({cambiarVista, UsuarioActual, setUsuarioActual}) {
         ];
     } else {
         opciones = [
-            { id:'Inicio', nombre:'Inicio' },
+            
             { id:'Login', nombre:'Iniciar Sesión' }
         ];
     }

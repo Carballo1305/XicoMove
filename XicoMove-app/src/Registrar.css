@@ -1,0 +1,109 @@
+/* Contenedor principal adaptado a la paleta de XicoMove */
+.container-registrar {
+    background-color: #081d24; 
+    padding: 30px;
+    border-radius: 20px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 500px;
+    color: white;
+    border-top: 4px solid #74A147;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.container-registrar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+.registrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-registrar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.info-registrar h1 {
+    font-size: 2.5rem;
+    color: #74A147; 
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid rgba(137, 176, 68, 0.3);
+    padding-bottom: 10px;
+}
+
+.info-registrar form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.info-registrar input {
+    font-size: 1.1rem;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(137, 176, 68, 0.4);
+    background-color: rgba(255, 255, 255, 0.05); 
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.info-registrar input:focus {
+    border-color: #74A147;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(116, 161, 71, 0.3);
+}
+
+.info-registrar input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.info-registrar button {
+    background-color: #74A147;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.info-registrar button:hover {
+    background-color: #5c8535;
+    transform: scale(1.02);
+}
+
+.info-registrar button:active {
+    transform: scale(0.98);
+}
+
+.error-msg {
+    color: #ff6b6b;
+    background-color: rgba(255, 107, 107, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border-left: 4px solid #ff6b6b;
+}
+
+.success-msg {
+    color: #74A147;
+    background-color: rgba(116, 161, 71, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border-left: 4px solid #74A147;
+}
